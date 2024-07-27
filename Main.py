@@ -1,4 +1,4 @@
-from Baskara import Baskara
+from ListasExercicios.Lista1.Resolução.Ex1.Baskara import Baskara
 
 class Main:
     if __name__ == "__main__":
