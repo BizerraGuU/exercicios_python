@@ -1,5 +1,6 @@
 from ListasExercicios.Lista1.Resolução.Ex1.Baskara import Baskara
 from ListasExercicios.Lista1.Resolução.Ex2.Computador import Computador
+from ListasExercicios.Lista1.Resolução.Ex3.Tempo import Tempo
 
 class Main:
     if __name__ == "__main__":
@@ -18,3 +19,14 @@ class Main:
         # c1.print_dados()
         # print(c1.compara_hd_ou_clock(c1, c2, 'HD'))
         # print(c1.compara_hd_ou_clock(c1, c2, 'CLOCK'))
+
+        #exercicio 3
+
+        h1 = Tempo(13, 28, 19)
+        h2 = Tempo(10, 20, 30)
+        print(h2.pega_maior_horario(h1, h2))
+        print(h1.segundos_comparacao(h1, h2))
+        h1.segundos_total()
+        h2.segundos_total()
+        h1.print_horario()
+        h2.print_horario()
