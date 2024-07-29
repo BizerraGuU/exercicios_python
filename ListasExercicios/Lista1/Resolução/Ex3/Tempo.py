@@ -33,7 +33,7 @@ class Tempo:
     
     def segundos_total(self):
 
-        if self.__hora < 0 or self.__minuto or self.__segundo < 0:
+        if self.__hora < 0 or self.__minuto < 0 or self.__segundo < 0:
             return "horário inválido"
         else:
             total_segundos = (self.__hora*3600) + (self.__minuto*60) + (self.__segundo)
@@ -45,9 +45,9 @@ class Tempo:
         if horario1 == horario2:
             return "os horarios são iguais"
 
-        elif (horario1.hora > horario2.hora 
-            and horario1.minuto > horario2.minuto 
-            and horario1.segundo > horario2.segundo):
+        elif (horario1.__hora > horario2.__hora 
+            or horario1.__minuto > horario2.__minuto 
+            or horario1.__segundo > horario2.__segundo):
             return "o horario 1 é maior"
         else:
             return "o horario 2 é maior"
@@ -55,15 +55,15 @@ class Tempo:
     def segundos_comparacao(self, horario1:'Tempo', horario2:'Tempo'):
 
 
-        if horario1.hora < 0 or horario1.minuto or horario1.segundo < 0:
+        if horario1.__hora < 0 or horario1.__minuto < 0 or horario1.__segundo < 0:
             return "horário inválido"
         else:
-            total_segundos1 = (horario1.hora*3600) + (horario1.minuto*60) + (horario1.segundo)
+            total_segundos1 = (horario1.__hora*3600) + (horario1.__minuto*60) + (horario1.__segundo)
         
-        if horario2.hora < 0 or horario2.minuto or horario2.segundo < 0:
+        if horario2.__hora < 0 or horario2.__minuto < 0 or horario2.__segundo < 0:
             return "horário inválido"
         else:
-            total_segundos2 = (horario2.hora*3600) + (horario2.minuto*60) + (horario2.segundo)
+            total_segundos2 = (horario2.__hora*3600) + (horario2.__minuto*60) + (horario2.__segundo)
 
         if total_segundos1 == total_segundos2:
             return "os dois são iguais"
