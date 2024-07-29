@@ -30,13 +30,30 @@ class Computador:
     
 
     def print_dados(self):
-        pass
+        print(f"dados computador: {self.__frequencia_clock}Hz, {self.__tamanho_hd}Gb, {self.__nome_processador}")
 
-    def compara_igualdade(self, computador:Computador):
-        pass
+    def compara_igualdade(self, computador1:'Computador', computador2:'Computador'):
+        if computador1 != computador2:
+            return False
+        else: 
+            return True
 
-    def compara_hd_ou_clock(self, computador:Computador, comparacao:char):
-        pass
+
+    def compara_hd_ou_clock(self, computador1:'Computador', computador2:'Computador', comparacao:str):
+        if computador1 == computador2:
+            return "HD e Clock iguais"
+        else: 
+            if comparacao == 'HD':
+                if computador1.tamanho_hd > computador2.tamanho_hd:
+                    return "o hd do computador 1 é maior"
+                else:
+                    return "o hd do computador 2 é maior"
+            
+            if comparacao == 'CLOCK':
+                if computador1.frequencia_clock > computador2.frequencia_clock:
+                    return "o clock do computador 1 é maior"
+                else:
+                    return "o clock do computador 2 é maior"
 
     
 
