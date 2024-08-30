@@ -30,4 +30,8 @@ class Main:
         # h1.print_horario()
 
         #exercicio 4
+        cpx = Complexo()
+        cpx.atribui_valor_a(10)
+        cpx.imprime_equacao
+        print(cpx.somaCom(27))
         
